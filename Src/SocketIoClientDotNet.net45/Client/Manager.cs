@@ -388,6 +388,8 @@ namespace Quobject.SocketIoClientDotNet.Client
             {
                 Parser.Packet pack = this.PacketBuffer[0];
                 PacketBuffer.Remove(pack);
+                if(pack==null)
+                    return;
                 this.Packet(pack);
             }
         }
